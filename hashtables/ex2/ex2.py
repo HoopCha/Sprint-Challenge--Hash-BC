@@ -23,9 +23,9 @@ def reconstruct_trip(tickets, length):
     for i in range(length):
         #If a previous route exists
         if route[i-1] is not None:
-            #Put in the route[i] the ticket that lasts route destination
+            #Put in the route[i] the ticket that last routes: destination
             route[i] = hash_table_retrieve(hashtable, route[i-1])
-        #Otherwise put in the route[i] the ticket that has nones destination
+        #Otherwise put in the route[i] (Which should be the first one) the ticket that has none: destination
         else:
             route[i] = hash_table_retrieve(hashtable, "NONE")
     # return the full route
